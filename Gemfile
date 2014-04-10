@@ -32,6 +32,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'pg'
+
 gem 'normalize-rails'
 
 gem "modernizr-rails"
