@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require modernizr
 //= require gumby
+//= require chosen-jquery
 //= require_tree .

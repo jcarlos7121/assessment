@@ -40,7 +40,11 @@ gem "modernizr-rails"
 
 gem 'gumby-framework'
 
+gem 'chosen-rails'
+
 gem 'rails_12factor', group: :production
+
+gem 'numbers_and_words'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

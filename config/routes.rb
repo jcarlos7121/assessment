@@ -5,6 +5,9 @@ Digitalnatives::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'application#index'
 
+  post '/firstmethod' => "application#apimethod"
+  post '/secondmethod' => "application#algorithmethod"
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

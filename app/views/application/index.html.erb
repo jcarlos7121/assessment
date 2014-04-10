@@ -1,1 +1,23 @@
-<p>Prueba</p>
+<header>
+<h1>DigitalNatives Test</h1>
+<h2>Objetive:</h2>
+<p class="objective">This test consists on a web form, you can type a number, and then it will appear completely in word.</p>
+<p class="explanation">You have 2 choices to get the result, you can choose the language in which you want the result to be given on the first form. On the second, i will only tell you the result in english, this one is solved by an algorithm i develped, while the first one its using a pretty simple API from ruby, you can type, and it will completely solve it on the go...</p>
+</header>
+<section class="form">
+	<h4 class="result">Here you will see the result!</h4>
+	<form action="/result" method="POST">
+		<h5>First Method</h5>
+		<div class="languagediv">
+			<select name="language" id="language">
+				<option value="1">Español</option>
+				<option value="2">English</option>
+				<option value="3">Hungarian</option>
+			</select>
+		</div>
+		<br>
+		<div class="field">
+			<input type="text" name="first" class="input first">
+		</div>
+	</form>
+</section>

@@ -27,6 +27,12 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.2)
     builder (3.1.4)
+    chosen-rails (1.1.0)
+      coffee-rails (>= 3.2)
+      compass-rails (>= 1.1.2)
+      railties (>= 3.0)
+      sass-rails (>= 3.2)
+    chunky_png (1.3.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -34,8 +40,16 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    compass (0.12.5)
+      chunky_png (~> 1.2)
+      fssm (>= 0.2.7)
+      sass (~> 3.2.19)
+    compass-rails (1.1.7)
+      compass (>= 0.12.2)
+      sprockets (<= 2.11.0)
     erubis (2.7.0)
     execjs (2.0.2)
+    fssm (0.2.10)
     gumby-framework (0.0.1)
       jquery-rails
       modernizr-rails
@@ -56,6 +70,9 @@ GEM
     modernizr-rails (2.7.1)
     multi_json (1.9.2)
     normalize-rails (3.0.1)
+    numbers_and_words (0.10.0)
+      activesupport
+      i18n
     pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
@@ -118,12 +135,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chosen-rails
   coffee-rails (~> 4.0.0)
   gumby-framework
   jbuilder (~> 1.2)
   jquery-rails
   modernizr-rails
   normalize-rails
+  numbers_and_words
   pg
   rails (= 4.0.4)
   rails_12factor

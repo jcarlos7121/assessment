@@ -10,6 +10,7 @@
  *
  *= require normalize-rails
  *= require gumby
+ *= require chosen
  *= require_self
  *= require_tree .
  */
