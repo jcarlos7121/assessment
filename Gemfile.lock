@@ -56,6 +56,7 @@ GEM
     modernizr-rails (2.7.1)
     multi_json (1.9.2)
     normalize-rails (3.0.1)
+    pg (0.17.1)
     polyglot (0.3.4)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -118,6 +119,7 @@ DEPENDENCIES
   jquery-rails
   modernizr-rails
   normalize-rails
+  pg
   rails (= 4.0.4)
   sass-rails (~> 4.0.2)
   sdoc
