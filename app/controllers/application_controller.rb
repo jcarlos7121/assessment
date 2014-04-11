@@ -39,22 +39,22 @@ class ApplicationController < ActionController::Base
     number = Integer(input)
 
     result = ""
-    
+
     if number < 20
       result = lessthantenth[number]
     elsif number > 19 && number < 100
       result = tenths[Integer(number.to_s[0])-2] + " " + lessthantenth[Integer(number.to_s[1])]
     elsif number > 99 && number < 1000
        Integer(number.to_s[1]) == 0 ?  result = lessthantenth[Integer(number.to_s[0])] + " hundred " + " " + lessthantenth[Integer(number.to_s[2])] : result = lessthantenth[Integer(number.to_s[0])] + " hundred " + tenths[Integer(number.to_s[1])-2] + " " + lessthantenth[Integer(number.to_s[2])]
+    elsif number > 999 && number < 10000
+      if Integer(number.to_s[1]) == 0
+        Integer(number.to_s[2]) == 0 ? result = lessthantenth[Integer(number.to_s[0])] + " thousand " +lessthantenth[Integer(number.to_s[3])] : result = lessthantenth[Integer(number.to_s[0])] + " thousand " + " "+  tenths[Integer(number.to_s[2])-2] + " " + lessthantenth[Integer(number.to_s[3])]
+      elsif Integer(number.to_s[2]) == 0
+        result =  lessthantenth[Integer(number.to_s[0])] + " thousand " + lessthantenth[Integer(number.to_s[1])] + " hundred " +  " " + lessthantenth[Integer(number.to_s[3])]
+      else
+        result = lessthantenth[Integer(number.to_s[0])] + " thousand " + lessthantenth[Integer(number.to_s[1])] + " hundred " + tenths[Integer(number.to_s[2])-2] + " " + lessthantenth[Integer(number.to_s[3])]
+      end
     end
-
   	render text:result
   end
-
-  def checkforminus(number)
-    if number < 0
-      0
-    end
-  end
-
 end
