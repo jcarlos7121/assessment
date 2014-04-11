@@ -21,12 +21,40 @@ class ApplicationController < ActionController::Base
       I18n.with_locale(:en) { result = numbertosolve.to_words }
     when "3"
       I18n.with_locale(:hu) { result = numbertosolve.to_words }
+    when "4"
+      I18n.with_locale(:fr) { result = numbertosolve.to_words }
+    when "5"
+      I18n.with_locale(:de) { result = numbertosolve.to_words }
     end
-  	render status: 200,text:result
+  	render text:result
   end
 
   def algorithmethod
-  	render status: 200
+
+    #i declared an array with numbers less than 20
+    lessthantenth = %W[one two three four five six seven eight nine ten eleven twelve thirten fourteen fifteen sixteen seventeen eighteen nineteen].unshift(' ')
+    tenths = %W[twenty thirty fourty fifty sixty seventy eighty ninety]
+
+    input = params[:number]
+    number = Integer(input)
+
+    result = ""
+    
+    if number < 20
+      result = lessthantenth[number]
+    elsif number > 19 && number < 100
+      result = tenths[Integer(number.to_s[0])-2] + " " + lessthantenth[Integer(number.to_s[1])]
+    elsif number > 99 && number < 1000
+       Integer(number.to_s[1]) == 0 ?  result = lessthantenth[Integer(number.to_s[0])] + " hundred " + " " + lessthantenth[Integer(number.to_s[2])] : result = lessthantenth[Integer(number.to_s[0])] + " hundred " + tenths[Integer(number.to_s[1])-2] + " " + lessthantenth[Integer(number.to_s[2])]
+    end
+
+  	render text:result
+  end
+
+  def checkforminus(number)
+    if number < 0
+      0
+    end
   end
 
 end
