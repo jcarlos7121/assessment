@@ -32,12 +32,6 @@ class ApplicationController < ActionController::Base
   end
 
   def algorithmethod
-
-    #i declared an array with numbers less than 20
-    lessthantenth = %W[one two three four five six seven eight nine ten eleven twelve thirten fourteen fifteen sixteen seventeen eighteen nineteen].unshift(' ')
-    #i declared an array for the tenths
-    tenths = %W[twenty thirty fourty fifty sixty seventy eighty ninety]
-
     input = params[:number]
     number = Integer(input)
 

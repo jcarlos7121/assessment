@@ -4,7 +4,7 @@ Digital Natives Job Excercises
 
 Hi!, This is the exercise i did to solve the Ruby/JS Numerals, this project its really simple, i hosted it for you at this URL
 
-[digitalnatives.proglabs.co](http://digitalnatives.proglabs.co)
+http://digitalnatives.proglabs.co
 
 You can also pull the project, solve the dependencies with
 
