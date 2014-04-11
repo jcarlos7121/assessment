@@ -45,14 +45,42 @@ class ApplicationController < ActionController::Base
     elsif number > 19 && number < 100
       result = tenths[Integer(number.to_s[0])-2] + " " + lessthantenth[Integer(number.to_s[1])]
     elsif number > 99 && number < 1000
-       Integer(number.to_s[1]) == 0 ?  result = lessthantenth[Integer(number.to_s[0])] + " hundred " + " " + lessthantenth[Integer(number.to_s[2])] : result = lessthantenth[Integer(number.to_s[0])] + " hundred " + tenths[Integer(number.to_s[1])-2] + " " + lessthantenth[Integer(number.to_s[2])]
+        if Integer(number.to_s[1]) == 0
+          result = lessthantenth[Integer(number.to_s[0])] + " hundred " + " " + lessthantenth[Integer(number.to_s[2])]   
+        else
+          if Integer(number.to_s[1]) == 1
+           result = lessthantenth[Integer(number.to_s[0])] + " hundred " + lessthantenth[Integer(number.to_s[1]+number.to_s[2])] 
+          else
+            result = lessthantenth[Integer(number.to_s[0])] + " hundred " + tenths[Integer(number.to_s[1])-2] + " " + lessthantenth[Integer(number.to_s[2])]            
+          end
+        end
     elsif number > 999 && number < 10000
+      #1000
       if Integer(number.to_s[1]) == 0
-        Integer(number.to_s[2]) == 0 ? result = lessthantenth[Integer(number.to_s[0])] + " thousand " +lessthantenth[Integer(number.to_s[3])] : result = lessthantenth[Integer(number.to_s[0])] + " thousand " + " "+  tenths[Integer(number.to_s[2])-2] + " " + lessthantenth[Integer(number.to_s[3])]
+        #1001
+        if Integer(number.to_s[2]) == 0
+          result = lessthantenth[Integer(number.to_s[0])] + " thousand " +lessthantenth[Integer(number.to_s[3])] 
+        else
+          #1011
+          if Integer(number.to_s[2]) == 1
+           result = lessthantenth[Integer(number.to_s[0])] + " thousand " +  lessthantenth[Integer("1"+number.to_s[3])]
+            #1020
+          else
+            result = lessthantenth[Integer(number.to_s[0])] + " thousand " + " "+  tenths[Integer(number.to_s[2])-2] + " " + lessthantenth[Integer(number.to_s[3])]
+          end
+        end
+      #1100
       elsif Integer(number.to_s[2]) == 0
         result =  lessthantenth[Integer(number.to_s[0])] + " thousand " + lessthantenth[Integer(number.to_s[1])] + " hundred " +  " " + lessthantenth[Integer(number.to_s[3])]
       else
-        result = lessthantenth[Integer(number.to_s[0])] + " thousand " + lessthantenth[Integer(number.to_s[1])] + " hundred " + tenths[Integer(number.to_s[2])-2] + " " + lessthantenth[Integer(number.to_s[3])]
+        #1110
+        if Integer(number.to_s[2]) == 1
+          result = lessthantenth[Integer(number.to_s[0])] + " thousand " + lessthantenth[Integer(number.to_s[1])] + " hundred " + lessthantenth[Integer("1"+number.to_s[3])]          
+          #1120
+        else
+            result = lessthantenth[Integer(number.to_s[0])] + " thousand " + lessthantenth[Integer(number.to_s[1])] + " hundred " + tenths[Integer(number.to_s[2])-2] + " " + lessthantenth[Integer(number.to_s[3])]          
+        end
+
       end
     end
   	render text:result
