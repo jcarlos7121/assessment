@@ -18,6 +18,6 @@ You can also pull the project, solve the dependencies with
 
 And the app will be up and running on port 3000.
 
-The app has a really simple web form, and solves the input by making ajax requests each time you enter text, The first form is solved by a quite simple API i found, and the second form is solved by an algorithm i made, all the source code and commits are in this repository.
+The app has a really simple web form, and solves the input by making ajax requests each time you enter text, The first form is solved by a quite simple API i found, and the second form is solved by an algorithm i made which is inside the controllers folder, on the numberstring.rb class, all the source code and commits are in this repository.
 
 feel free to contact me, have a wonderful day.
