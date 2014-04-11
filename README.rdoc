@@ -1,28 +1,23 @@
+Digital Natives Job Excercises
+
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi!, This is the exercise i did to solve the Ruby/JS Numerals, this project its really simple, i hosted it for you at this URL
 
-Things you may want to cover:
+[digitalnatives.proglabs.co](http://digitalnatives.proglabs.co)
 
-* Ruby version
+You can also pull the project, solve the dependencies with
 
-* System dependencies
+### Depencencies
 
-* Configuration
+    $ bundle install
 
-* Database creation
+### Run App
 
-* Database initialization
+    $ rails s
 
-* How to run the test suite
+And the app will be up and running on port 3000.
 
-* Services (job queues, cache servers, search engines, etc.)
+The app has a really simple web form, and solves the input by making ajax requests each time you enter text, The first form is solved by a quite simple API i found, and the second form is solved by an algorithm i made, all the source code and commits are in this repository.
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+feel free to contact me, have a wonderful day.
