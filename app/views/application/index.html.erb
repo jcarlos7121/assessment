@@ -1,11 +1,13 @@
 <header>
 <h1>DigitalNatives Test</h1>
 <h2>Objetive:</h2>
-<p class="objective">This test consists on a web form, you can type a number, and then it will appear completely in word.</p>
-<p class="explanation">You have 2 choices to get the result, you can choose the language in which you want the result to be given on the first form. On the second, i will only tell you the result in english, this one is solved by an algorithm i develped, while the first one its using a pretty simple API from ruby, you can type, and it will completely solve it on the go...</p>
+<p class="objective">This test consists on 2 web forms where you can type a number, and then it will appear completely in translated to words.</p>
+<p class="explanation">You have 2 choices to get the result, on the first form you can choose the language in which you want the result to be given. On the second one, i will only tell you the result in english using the algorithm i developed, you can see on the application controller the algorithm and also the usage of a pretty simple API from ruby that solves the first form input...</p>
 </header>
 <section class="form">
-	<h4 class="result">Here you will see the result!</h4>
+	<div class="result">
+		<h4>Here you will see the result!</h4>
+	</div>
 	<form action="/result" method="POST">
 		<h5>First Method</h5>
 		<div class="languagediv">
